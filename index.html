@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>2026年 人事労務課職員旅行 思い出アルバム</title>
+<meta property="og:title" content="2026 人事労務課 職員旅行 思い出アルバム">
+<meta property="og:description" content="7月12日・大阪満喫ツアーの思い出を一冊のアルバムに。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#C9392B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Yomogi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ①表紙 -->
+<header id="cover" class="cover">
+  <div class="cover-rays" aria-hidden="true"></div>
+  <div class="cover-inner">
+    <div class="cover-band">
+      <span class="band-text">保存版・卒業しない修学旅行</span>
+    </div>
+    <p class="cover-eyebrow">JAぎふ 人事労務課</p>
+    <h1 class="cover-title">2026年<br>人事労務課<br>職員旅行</h1>
+    <p class="cover-sub"><span>思</span><span>い</span><span>出</span><span>ア</span><span>ル</span><span>バ</span><span>ム</span></p>
+    <div class="cover-photo-frame" id="coverPhotoFrame">
+      <!-- 集合写真がここに入ります(JSが挿入) -->
+    </div>
+    <div class="cover-meta">
+      <span class="cover-date">2026年7月12日</span>
+      <span class="cover-date-sub">2026.7.12(日) 大阪満喫ツアー</span>
+    </div>
+    <div class="cover-stamp" aria-hidden="true">
+      <span>大阪<br>日帰</span>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <span class="hint-text">下へめくる</span>
+    <span class="hint-arrow">▼</span>
+  </div>
+</header>
+
+<main id="album">
+
+  <!-- ②当日の行程 -->
+  <section class="section timeline-section torn-top" id="timeline">
+    <div class="section-head">
+      <span class="section-kicker">その一</span>
+      <h2 class="section-title">当日の行程</h2>
+      <p class="section-lead">朝七時半、岐阜羽島駅。十人の旅がはじまる。</p>
+    </div>
+    <ol class="timeline" id="timelineList"></ol>
+  </section>
+
+  <!-- ③各スポット(JSが自動生成) -->
+  <div id="spots"></div>
+
+  <!-- ④ベストショット -->
+  <section class="section best-section torn-top" id="bestSection" hidden>
+    <div class="section-head">
+      <span class="section-kicker">特選</span>
+      <h2 class="section-title">ベストショット</h2>
+      <p class="section-lead">この旅の、いちばんの瞬間。</p>
+    </div>
+    <div class="best-list" id="bestList"></div>
+  </section>
+
+  <!-- ⑤スライドショー -->
+  <section class="section slideshow-section torn-top" id="slideshowSection" hidden>
+    <div class="section-head">
+      <span class="section-kicker">上映会</span>
+      <h2 class="section-title">スライドショー</h2>
+      <p class="section-lead">選りすぐりの一枚一枚が、自動でめくられます。</p>
+    </div>
+    <button class="slideshow-open" id="slideshowOpen">
+      <span class="reel" aria-hidden="true">◉</span> 上映をはじめる
+    </button>
+  </section>
+
+  <!-- 写真がまだ無いときの案内 -->
+  <section class="section empty-note torn-top" id="emptyNote" hidden>
+    <p class="empty-text">写真は現像中です。<br>もうしばらくお待ちください。</p>
+  </section>
+
+  <!-- 思い出ムービー -->
+  <section class="section movie-section torn-top" id="movieSection" hidden>
+    <div class="section-head">
+      <span class="section-kicker movie-kicker">特別上映</span>
+      <h2 class="section-title movie-title">思い出ムービー</h2>
+      <p class="section-lead movie-lead">写真だけでは伝えきれない思い出を、<br>ぜひ動画でもご覧ください。</p>
+    </div>
+    <button class="movie-frame" id="movieFrame" aria-label="思い出ムービーをYouTubeで再生">
+      <span class="film-holes top" aria-hidden="true"></span>
+      <span class="movie-thumb" id="movieThumb"></span>
+      <span class="movie-play" aria-hidden="true"><span class="movie-play-btn">▶</span><span class="movie-play-text">タップして再生</span></span>
+      <span class="film-holes bottom" aria-hidden="true"></span>
+    </button>
+    <p class="movie-note">YouTubeが開きます(限定公開)</p>
+  </section>
+
+  <!-- ⑥エンディング -->
+  <footer class="ending torn-top" id="ending">
+    <div class="ending-inner">
+      <p class="ending-kicker">おわりに</p>
+      <h2 class="ending-title">ご参加<br>ありがとう<br>ございました</h2>
+      <div class="ending-photo" id="endingPhoto"></div>
+      <p class="ending-note">人事労務課の十人で過ごした一日。<br>この一冊が、何年先も色あせない<br>思い出になりますように。</p>
+      <div class="ending-stamp" aria-hidden="true"><span>完</span></div>
+      <p class="ending-credit">2026年7月12日 大阪満喫ツアー / 幹事より</p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ライトボックス(全画面表示) -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" aria-label="閉じる">×</button>
+  <div class="lb-stage" id="lbStage"></div>
+  <p class="lb-caption" id="lbCaption"></p>
+  <div class="lb-nav" aria-hidden="true">
+    <span class="lb-count" id="lbCount"></span>
+    <span class="lb-hint">← スワイプ → / ピンチで拡大</span>
+  </div>
+</div>
+
+<!-- スライドショー(全画面) -->
+<div class="show" id="show" hidden>
+  <div class="show-stage" id="showStage"></div>
+  <p class="show-caption" id="showCaption"></p>
+  <div class="show-controls">
+    <button id="showClose" class="show-btn">閉じる</button>
+  </div>
+</div>
+
+<script src="album-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
